@@ -1,5 +1,9 @@
 # NextFoodies
 
+## README.md
+* [简体中文](README.zh_CN.md)
+* [english](README.md)
+
 ## 简介
 
 这是一个分享自己美好用餐经历的 web 应用，用户可以上传美食图片，并留言。

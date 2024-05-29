@@ -1,5 +1,9 @@
 # NextFoodies
 
+## README.md
+* [简体中文](README.zh_CN.md)
+* [english](README.md)
+
 ## Brief introduce
 
 This is a website to share your good dining experience. Users can upload food pictures and leave messages.
