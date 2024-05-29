@@ -21,15 +21,25 @@
 ## 如何开始使用：
 1. 将项目git clone到本地
 2. 进入项目目录  
+
 在命令行窗口中运行
+
 ```cd NextFoodies```
+
 3. 下载依赖项
+
 在命令行窗口中运行
+
 ```npm install```
+
 本项目需要在node环境下运行，测试环境为 v 20.13.1
+
 4. 进入生产环境
+
 在命令行窗口中运行
+
 ```npm start```
+
 然后根据命令行提示，在本机http://localhost:3000访问应用
 
 ## brief introduce
