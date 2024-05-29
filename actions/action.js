@@ -1,9 +1,10 @@
 'use server';
 
-import { redirect } from 'next';
-import { saveMeal } from './meals';
+import { redirect } from 'next/navigation';
+import { saveMeal } from '../lib/meals';
+import { revalidatePath } from 'next/cache';
 
-export const shareAction = async (formData) => {
+export const shareAction = async (prevState,formData) => {
 	function isInvalidText(text) {
 		return !text || text.trim() === '';
 	}
@@ -15,22 +16,22 @@ export const shareAction = async (formData) => {
 		instructions: formData.get('instructions'),
 		image: formData.get('image'),
 	};
-
 	//data invalidation
 	if (
 		isInvalidText(data.creator) ||
-		isInvalidText(title) ||
-		isInvalidText(summary) ||
-		isInvalidText(instructions) ||
-		isInvalidText(email) ||
-		!email.includes('@') ||
-		!image
+		isInvalidText(data.title) ||
+		isInvalidText(data.summary) ||
+		isInvalidText(data.instructions) ||
+		isInvalidText(data.creator_email) ||
+		!data.creator_email.includes('@') ||
+		!data.image
 	) {
 		return ({
 			message:'Invalid input'
-			
 		})
 	}
 
 	await saveMeal(data);
+	revalidatePath('/meals')
+	redirect('/meals')
 };

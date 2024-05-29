@@ -1,7 +1,7 @@
 'use client';
 import ImagePicker from '@/components/meals/image-picker';
 import classes from './page.module.css';
-import { shareAction } from '@/lib/action';
+import { shareAction } from '@/actions/action'
 import ShareFormSubmit from '@/components/meals/share-form-submit';
 import { useFormState } from 'react-dom';
 

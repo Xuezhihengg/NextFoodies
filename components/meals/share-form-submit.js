@@ -6,7 +6,6 @@ export default function ShareFormSubmit() {
 
 	return (
 		<button type="submit" disabled={pending}>
-			{' '}
 			{pending ? 'Submitting...' : 'Share Meal'}
 		</button>
 	);
